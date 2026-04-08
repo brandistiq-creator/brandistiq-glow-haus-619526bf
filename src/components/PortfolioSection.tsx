@@ -1,15 +1,18 @@
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
+import ivanaBeautyImg from "@/assets/portfolio-ivana-beauty.jpg";
 
 interface PortfolioItem {
   title: string;
   description: string;
   category: string;
   gradient: string;
+  image?: string;
+  link?: string;
 }
 
 const portfolioItems: PortfolioItem[] = [
-  { title: "Kozmetički salon Bella", description: "Moderna web stranica za kozmetički salon s online rezervacijama i galerijom radova.", category: "Kozmetički saloni", gradient: "from-pink-500/20 to-purple-500/20" },
+  { title: "Ivana Beauty Salon", description: "Elegantna wellness & beauty web stranica s online rezervacijama, višejezičnom podrškom i luksuznim dizajnom.", category: "Kozmetički saloni", gradient: "from-pink-500/20 to-purple-500/20", image: ivanaBeautyImg, link: "https://ivanabeauty.lovable.app/" },
   { title: "Frizer Studio M", description: "Responzivna stranica za frizerski salon s cjenikom usluga i kontakt formom.", category: "Frizerski saloni", gradient: "from-blue-500/20 to-cyan-500/20" },
   { title: "Masažni studio Relax", description: "Elegantna stranica za wellness i masažni studio s terminskim kalendarom.", category: "Masažni studiji", gradient: "from-green-500/20 to-teal-500/20" },
   { title: "ČistoMi servis", description: "Profesionalna web prezentacija za servis čišćenja s online kalkulatorom cijena.", category: "Servisi za čišćenje", gradient: "from-sky-500/20 to-blue-500/20" },
