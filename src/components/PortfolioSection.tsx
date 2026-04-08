@@ -1,15 +1,18 @@
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
+import ivanaBeautyImg from "@/assets/portfolio-ivana-beauty.jpg";
 
 interface PortfolioItem {
   title: string;
   description: string;
   category: string;
   gradient: string;
+  image?: string;
+  link?: string;
 }
 
 const portfolioItems: PortfolioItem[] = [
-  { title: "Kozmetički salon Bella", description: "Moderna web stranica za kozmetički salon s online rezervacijama i galerijom radova.", category: "Kozmetički saloni", gradient: "from-pink-500/20 to-purple-500/20" },
+  { title: "Ivana Beauty Salon", description: "Elegantna wellness & beauty web stranica s online rezervacijama, višejezičnom podrškom i luksuznim dizajnom.", category: "Kozmetički saloni", gradient: "from-pink-500/20 to-purple-500/20", image: ivanaBeautyImg, link: "https://ivanabeauty.lovable.app/" },
   { title: "Frizer Studio M", description: "Responzivna stranica za frizerski salon s cjenikom usluga i kontakt formom.", category: "Frizerski saloni", gradient: "from-blue-500/20 to-cyan-500/20" },
   { title: "Masažni studio Relax", description: "Elegantna stranica za wellness i masažni studio s terminskim kalendarom.", category: "Masažni studiji", gradient: "from-green-500/20 to-teal-500/20" },
   { title: "ČistoMi servis", description: "Profesionalna web prezentacija za servis čišćenja s online kalkulatorom cijena.", category: "Servisi za čišćenje", gradient: "from-sky-500/20 to-blue-500/20" },
@@ -32,10 +35,14 @@ const PortfolioCard = ({ item, index }: { item: PortfolioItem; index: number }) 
     transition={{ duration: 0.5, delay: index * 0.08 }}
     className="glass-card-hover group overflow-hidden"
   >
-    <div className={`h-48 bg-gradient-to-br ${item.gradient} flex items-center justify-center`}>
-      <span className="font-heading text-2xl font-bold text-foreground/30 group-hover:text-foreground/50 transition-colors">
-        {item.title.charAt(0)}
-      </span>
+    <div className={`h-48 bg-gradient-to-br ${item.gradient} flex items-center justify-center overflow-hidden`}>
+      {item.image ? (
+        <img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+      ) : (
+        <span className="font-heading text-2xl font-bold text-foreground/30 group-hover:text-foreground/50 transition-colors">
+          {item.title.charAt(0)}
+        </span>
+      )}
     </div>
     <div className="p-6">
       <span className="inline-block text-xs font-medium px-3 py-1 rounded-full bg-primary/10 text-primary mb-3">
@@ -43,9 +50,15 @@ const PortfolioCard = ({ item, index }: { item: PortfolioItem; index: number }) 
       </span>
       <h3 className="font-heading text-lg font-semibold mb-2">{item.title}</h3>
       <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{item.description}</p>
-      <button className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-accent transition-colors">
-        Pogledaj projekt <ExternalLink size={14} />
-      </button>
+      {item.link ? (
+        <a href={item.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-accent transition-colors">
+          Pogledaj projekt <ExternalLink size={14} />
+        </a>
+      ) : (
+        <button className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-accent transition-colors">
+          Pogledaj projekt <ExternalLink size={14} />
+        </button>
+      )}
     </div>
   </motion.div>
 );
