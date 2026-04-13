@@ -21,6 +21,20 @@ const HeroSection = () => {
         }}
       />
 
+      {/* Video as background of hero content */}
+      <div className="absolute inset-0 z-0">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+          src="/hero-video.mp4"
+        />
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-background/60" />
+      </div>
+
       <div className="section-container relative z-10 text-center max-w-5xl pt-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -33,27 +47,10 @@ const HeroSection = () => {
           </div>
         </motion.div>
 
-        {/* Hero video */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.15 }}
-          className="mb-10 w-full rounded-2xl overflow-hidden border border-border/50 shadow-[0_0_60px_-15px_hsl(var(--primary)/0.3)]"
-        >
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-auto"
-            src="/hero-video.mp4"
-          />
-        </motion.div>
-
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.3 }}
+          transition={{ duration: 0.7, delay: 0.15 }}
           className="font-heading text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight mb-6 text-balance"
         >
           Inteligentna web rješenja za{" "}
@@ -63,7 +60,7 @@ const HeroSection = () => {
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.45 }}
+          transition={{ duration: 0.7, delay: 0.3 }}
           className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
         >
           Pomažemo malim i srednjim poduzećima da ostvare digitalni rast kroz
@@ -74,7 +71,7 @@ const HeroSection = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.6 }}
+          transition={{ duration: 0.7, delay: 0.45 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <a href="#kontakt" className="btn-primary-gradient flex items-center gap-2">
@@ -89,7 +86,7 @@ const HeroSection = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.9 }}
+          transition={{ duration: 1, delay: 0.8 }}
           className="mt-16 flex flex-wrap items-center justify-center gap-8 text-sm text-muted-foreground"
         >
           {["50+ završenih projekata", "Brza isporuka", "AI integracije", "100% zadovoljnih klijenata"].map((t) => (
