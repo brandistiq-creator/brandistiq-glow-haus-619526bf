@@ -4,6 +4,7 @@ import ServicesSection from "@/components/ServicesSection";
 import PortfolioSection from "@/components/PortfolioSection";
 import AISolutionsSection from "@/components/AISolutionsSection";
 import AboutSection from "@/components/AboutSection";
+import FAQSection from "@/components/FAQSection";
 import ContactSection from "@/components/ContactSection";
 import FooterSection from "@/components/FooterSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -18,6 +19,7 @@ const Index = () => {
       <PortfolioSection />
       <AISolutionsSection />
       <AboutSection />
+      <FAQSection />
       <ContactSection />
       <FooterSection />
     </div>
@@ -25,3 +27,4 @@ const Index = () => {
 };
 
 export default Index;
+
