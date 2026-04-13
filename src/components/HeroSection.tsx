@@ -82,6 +82,23 @@ const HeroSection = () => {
             </div>
           ))}
         </motion.div>
+
+        {/* Hero video */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1 }}
+          className="mt-16 w-full max-w-5xl mx-auto rounded-2xl overflow-hidden border border-border/50 shadow-[0_0_60px_-15px_hsl(var(--primary)/0.3)]"
+        >
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-auto"
+            src="/hero-video.mp4"
+          />
+        </motion.div>
       </div>
     </section>
   );
