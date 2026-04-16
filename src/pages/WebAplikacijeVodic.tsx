@@ -12,7 +12,7 @@ const sections = [
     intro: "Brzina učitavanja stranice izravno utječe na vašu poziciju na Googleu i stopu napuštanja stranice.",
     points: [
       {
-        bold: "Moderni Frameworks:",
+      bold: "Moderni Frameworks:",
         text: "Korištenje tehnologija poput React.js ili Next.js omogućuje kreiranje 'Single Page Applications' (SPA) koje se učitavaju trenutno.",
       },
       {
