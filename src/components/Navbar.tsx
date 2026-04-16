@@ -47,7 +47,7 @@ const Navbar = () => {
               {l.label}
             </a>
           ))}
-          <a href="#kontakt" className="btn-primary-gradient text-sm !px-6 !py-2">
+          <a href="mailto:brandistiq@gmail.com" className="btn-primary-gradient text-sm !px-6 !py-2">
             Zatraži ponudu
           </a>
         </div>
@@ -82,7 +82,7 @@ const Navbar = () => {
                 </a>
               ))}
               <a
-                href="#kontakt"
+                href="mailto:brandistiq@gmail.com"
                 onClick={() => setMobileOpen(false)}
                 className="btn-primary-gradient text-sm text-center !py-2 mt-2"
               >

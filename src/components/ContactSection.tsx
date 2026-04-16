@@ -31,27 +31,32 @@ const ContactSection = () => {
             transition={{ duration: 0.5 }}
             className="glass-card p-8 space-y-6"
           >
-            <div className="flex items-start gap-4">
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Marti%C4%87eva+67%2C+Zagreb+10000"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-start gap-4 group"
+            >
               <MapPin size={20} className="text-primary mt-1 shrink-0" />
               <div>
-                <h4 className="font-heading font-semibold mb-1">Adresa</h4>
+                <h4 className="font-heading font-semibold mb-1 group-hover:text-primary transition-colors">Adresa</h4>
                 <p className="text-muted-foreground text-sm">Martićeva 67, Zagreb 10000</p>
               </div>
-            </div>
-            <div className="flex items-start gap-4">
+            </a>
+            <a href="tel:+385958280800" className="flex items-start gap-4 group">
               <Phone size={20} className="text-primary mt-1 shrink-0" />
               <div>
-                <h4 className="font-heading font-semibold mb-1">Telefon</h4>
+                <h4 className="font-heading font-semibold mb-1 group-hover:text-primary transition-colors">Telefon</h4>
                 <p className="text-muted-foreground text-sm">+385 (95) 8280-800</p>
               </div>
-            </div>
-            <div className="flex items-start gap-4">
+            </a>
+            <a href="mailto:brandistiq@gmail.com" className="flex items-start gap-4 group">
               <Mail size={20} className="text-primary mt-1 shrink-0" />
               <div>
-                <h4 className="font-heading font-semibold mb-1">Email</h4>
+                <h4 className="font-heading font-semibold mb-1 group-hover:text-primary transition-colors">Email</h4>
                 <p className="text-muted-foreground text-sm">brandistiq@gmail.com</p>
               </div>
-            </div>
+            </a>
           </motion.div>
 
           {/* Map */}
