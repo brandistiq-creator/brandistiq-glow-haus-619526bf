@@ -13,11 +13,11 @@ const sections = [
     points: [
       {
         bold: "Moderni Frameworks:",
-        text: "Korištenje tehnologija poput React.js ili Next.js omogućuje kreiranje „Single Page Applications" (SPA) koje se učitavaju trenutno.",
+        text: "Korištenje tehnologija poput React.js ili Next.js omogućuje kreiranje "Single Page Applications" (SPA) koje se učitavaju trenutno.",
       },
       {
         bold: "Vite i Optimizacija:",
-        text: "Za razliku od zastarjelih WordPress rješenja, moji projekti koriste moderne alate za build koji eliminiraju nepotreban kod, čineći stranicu „laganom" i responzivnom na svim uređajima.",
+        text: "Za razliku od zastarjelih WordPress rješenja, moji projekti koriste moderne alate za build koji eliminiraju nepotreban kod, čineći stranicu "laganom" i responzivnom na svim uređajima.",
       },
     ],
   },
@@ -31,7 +31,7 @@ const sections = [
       { bold: "", text: "Vizualizirati promjene materijala i opreme." },
       { bold: "", text: "Dobiti trenutačni izračun cijene temeljem složene logike koju programiramo u pozadini." },
     ],
-    outro: "To nije samo „slika", to je prodajni asistent koji automatizira proces ponude.",
+    outro: "To nije samo "slika", to je prodajni asistent koji automatizira proces ponude.",
   },
   {
     icon: Search,
@@ -112,7 +112,7 @@ const WebAplikacijeVodic = () => {
             className="glass-card p-8 sm:p-10 space-y-5 text-muted-foreground leading-relaxed text-lg"
           >
             <p>
-              U svijetu digitalne prisutnosti, granica između obične web stranice i kompleksne web aplikacije postaje sve jasnija. Za poduzetnike u industrijama poput montažne gradnje ili proizvodnje, posjedovanje „digitalnog letka" više nije dovoljno. Kako biste skalirali prodaju, trebate rješenje koje radi za vas 24/7.
+              U svijetu digitalne prisutnosti, granica između obične web stranice i kompleksne web aplikacije postaje sve jasnija. Za poduzetnike u industrijama poput montažne gradnje ili proizvodnje, posjedovanje "digitalnog letka" više nije dovoljno. Kako biste skalirali prodaju, trebate rješenje koje radi za vas 24/7.
             </p>
             <p>
               Kao programer, fokusiram se na izradu rješenja koja ne samo da izgledaju profesionalno, već su inženjerski optimizirana za konverziju i brzinu. Evo što čini razliku između prosječnog i vrhunskog weba.
@@ -183,7 +183,7 @@ const WebAplikacijeVodic = () => {
               Digitalna transformacija, a ne samo dizajn
             </h2>
             <p className="text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-4">
-              Kao programer, ne nudim vam samo „izgled", već infrastrukturu. Ulaganje u custom web rješenje s ugrađenim konfiguratorom i vrhunskom SEO bazom najbrži je put do digitalne dominacije u vašoj niši.
+              Kao programer, ne nudim vam samo "izgled", već infrastrukturu. Ulaganje u custom web rješenje s ugrađenim konfiguratorom i vrhunskom SEO bazom najbrži je put do digitalne dominacije u vašoj niši.
             </p>
             <p className="text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-8">
               Vrijeme je da vaša web stranica počne prodavati umjesto vas.
