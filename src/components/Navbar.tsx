@@ -82,7 +82,7 @@ const Navbar = () => {
                 </a>
               ))}
               <a
-                href="#kontakt"
+                href="mailto:brandistiq@gmail.com"
                 onClick={() => setMobileOpen(false)}
                 className="btn-primary-gradient text-sm text-center !py-2 mt-2"
               >
