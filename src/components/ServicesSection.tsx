@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Globe, AppWindow, Palette, Bot } from "lucide-react";
+import { Globe, AppWindow, Palette, Bot, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const services = [
   {
