@@ -47,7 +47,7 @@ const Navbar = () => {
               {l.label}
             </a>
           ))}
-          <a href="#kontakt" className="btn-primary-gradient text-sm !px-6 !py-2">
+          <a href="mailto:brandistiq@gmail.com" className="btn-primary-gradient text-sm !px-6 !py-2">
             Zatraži ponudu
           </a>
         </div>
