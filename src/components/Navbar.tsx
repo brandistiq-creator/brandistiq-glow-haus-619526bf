@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const navLinks = [
   { href: "#hero", label: "Početna" },
@@ -14,12 +15,49 @@ const navLinks = [
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  // Scroll to hash when navigating to home with a hash
+  useEffect(() => {
+    if (location.pathname === "/" && location.hash) {
+      const id = location.hash.replace("#", "");
+      requestAnimationFrame(() => {
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+      });
+    }
+  }, [location]);
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    setMobileOpen(false);
+    if (href.startsWith("#")) {
+      e.preventDefault();
+      if (location.pathname !== "/") {
+        navigate("/" + href);
+      } else {
+        const id = href.replace("#", "");
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+        else window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    }
+  };
+
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    if (location.pathname !== "/") {
+      navigate("/");
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
 
   return (
     <nav
@@ -30,7 +68,7 @@ const Navbar = () => {
       }`}
     >
       <div className="section-container flex items-center justify-between">
-        <a href="#hero" className="flex items-center gap-2">
+        <a href="/" onClick={handleLogoClick} className="flex items-center gap-2">
           <span className="font-heading text-xl font-bold gradient-text">
             BrandistiQ
           </span>
@@ -42,6 +80,7 @@ const Navbar = () => {
             <a
               key={l.href}
               href={l.href}
+              onClick={(e) => handleNavClick(e, l.href)}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               {l.label}
@@ -75,7 +114,7 @@ const Navbar = () => {
                 <a
                   key={l.href}
                   href={l.href}
-                  onClick={() => setMobileOpen(false)}
+                  onClick={(e) => handleNavClick(e, l.href)}
                   className="text-sm font-medium text-muted-foreground hover:text-foreground py-2 transition-colors"
                 >
                   {l.label}
