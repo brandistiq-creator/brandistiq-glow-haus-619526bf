@@ -74,7 +74,7 @@ const HeroSection = () => {
           transition={{ duration: 0.7, delay: 0.45 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <a href="#kontakt" className="btn-primary-gradient flex items-center gap-2">
+          <a href="mailto:brandistiq@gmail.com" className="btn-primary-gradient flex items-center gap-2">
             Zatraži ponudu <ArrowRight size={18} />
           </a>
           <a href="#portfolio" className="btn-outline-glow">
