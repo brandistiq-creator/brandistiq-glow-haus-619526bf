@@ -96,7 +96,7 @@ const ServicesSection = () => {
               </div>
               <h3 className="font-heading text-xl font-semibold mb-3">{s.title}</h3>
               <p className="text-muted-foreground mb-5 leading-relaxed">{s.description}</p>
-              <ul className="space-y-2">
+              <ul className="space-y-2 mb-5">
                 {s.benefits.map((b) => (
                   <li key={b} className="flex items-start gap-2 text-sm text-muted-foreground">
                     <div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
@@ -104,6 +104,15 @@ const ServicesSection = () => {
                   </li>
                 ))}
               </ul>
+              {s.link && (
+                <Link
+                  to={s.link}
+                  className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors group"
+                >
+                  Saznaj više
+                  <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                </Link>
+              )}
             </motion.div>
           ))}
         </div>
