@@ -188,7 +188,7 @@ const WebAplikacijeVodic = () => {
             <p className="text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-8">
               Vrijeme je da vaša web stranica počne prodavati umjesto vas.
             </p>
-            <a href="/#kontakt" className="btn-primary-gradient inline-block">
+            <a href="https://wa.me/385958280800" target="_blank" rel="noopener noreferrer" className="btn-primary-gradient inline-block">
               Kontaktirajte me za razvoj rješenja
             </a>
           </motion.div>
