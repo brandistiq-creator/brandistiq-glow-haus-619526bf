@@ -13,11 +13,11 @@ const sections = [
     points: [
       {
         bold: "Moderni Frameworks:",
-        text: "Korištenje tehnologija poput React.js ili Next.js omogućuje kreiranje "Single Page Applications" (SPA) koje se učitavaju trenutno.",
+        text: "Korištenje tehnologija poput React.js ili Next.js omogućuje kreiranje 'Single Page Applications' (SPA) koje se učitavaju trenutno.",
       },
       {
         bold: "Vite i Optimizacija:",
-        text: "Za razliku od zastarjelih WordPress rješenja, moji projekti koriste moderne alate za build koji eliminiraju nepotreban kod, čineći stranicu "laganom" i responzivnom na svim uređajima.",
+        text: "Za razliku od zastarjelih WordPress rješenja, moji projekti koriste moderne alate za build koji eliminiraju nepotreban kod, čineći stranicu 'laganom' i responzivnom na svim uređajima.",
       },
     ],
   },
@@ -31,7 +31,7 @@ const sections = [
       { bold: "", text: "Vizualizirati promjene materijala i opreme." },
       { bold: "", text: "Dobiti trenutačni izračun cijene temeljem složene logike koju programiramo u pozadini." },
     ],
-    outro: "To nije samo "slika", to je prodajni asistent koji automatizira proces ponude.",
+    outro: "To nije samo 'slika', to je prodajni asistent koji automatizira proces ponude.",
   },
   {
     icon: Search,
