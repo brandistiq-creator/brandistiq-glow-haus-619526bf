@@ -13,6 +13,7 @@ const services = [
       "Mobilna responzivnost",
       "Brzo učitavanje stranica",
     ],
+    link: "/web-aplikacije-vodic",
   },
   {
     icon: AppWindow,
