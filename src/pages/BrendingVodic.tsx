@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import { ArrowLeft, Palette, Package, Layers, BookOpen, Sparkles, Rocket } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
