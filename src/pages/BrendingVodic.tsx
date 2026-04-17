@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import { ArrowLeft, Palette, Package, Layers, BookOpen, Sparkles, Rocket } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
@@ -74,6 +75,28 @@ const sections = [
 const BrendingVodic = () => {
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Dizajn logotipa i brending Zagreb | Vizualni identitet — BrandistiQ</title>
+        <meta
+          name="description"
+          content="Profesionalni dizajn logotipa, kompletan branding paket i knjiga grafičkih standarda. Stvorite vizualni identitet koji prodaje i izdvaja vaš brend."
+        />
+        <link rel="canonical" href="https://brandistiq-glow-haus.lovable.app/brending-vodic" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Dizajn logotipa i brending Zagreb | Vizualni identitet — BrandistiQ" />
+        <meta
+          property="og:description"
+          content="Vodič kroz dizajn logotipa, branding paket i konzistentan vizualni identitet koji prodaje."
+        />
+        <meta property="og:url" content="https://brandistiq-glow-haus.lovable.app/brending-vodic" />
+        <meta property="og:image" content="https://brandistiq-glow-haus.lovable.app/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Dizajn logotipa i brending — BrandistiQ" />
+        <meta
+          name="twitter:description"
+          content="Stvorite vizualni identitet koji prodaje: logo, paleta, tipografija i brand manual."
+        />
+      </Helmet>
       <Navbar />
 
       {/* Hero */}

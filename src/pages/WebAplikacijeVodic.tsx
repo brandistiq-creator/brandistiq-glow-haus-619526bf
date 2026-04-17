@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import { ArrowLeft, Eye, Search, Smartphone, Target, Rocket } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
@@ -77,6 +78,28 @@ const sections = [
 const WebAplikacijeVodic = () => {
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Izrada web stranica Zagreb | SEO i moderan dizajn — BrandistiQ</title>
+        <meta
+          name="description"
+          content="Saznajte zašto je web stranica najjači prodajni alat. Profesionalna izrada web stranica s SEO optimizacijom, mobilnom prilagodbom i fokusom na konverzije."
+        />
+        <link rel="canonical" href="https://brandistiq-glow-haus.lovable.app/web-aplikacije-vodic" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Izrada web stranica Zagreb | SEO i moderan dizajn — BrandistiQ" />
+        <meta
+          property="og:description"
+          content="Vodič kroz strateški izgrađenu web stranicu koja prodaje: dizajn, SEO, brzina i konverzija."
+        />
+        <meta property="og:url" content="https://brandistiq-glow-haus.lovable.app/web-aplikacije-vodic" />
+        <meta property="og:image" content="https://brandistiq-glow-haus.lovable.app/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Izrada web stranica Zagreb — BrandistiQ" />
+        <meta
+          name="twitter:description"
+          content="Vodič kroz strateški izgrađenu web stranicu koja prodaje: dizajn, SEO, brzina i konverzija."
+        />
+      </Helmet>
       <Navbar />
 
       {/* Hero */}
