@@ -37,6 +37,7 @@ const services = [
       "Konzistentnost na svim kanalima",
       "Vizualni smjernice za brend",
     ],
+    link: "/brending-vodic",
   },
   {
     icon: Bot,
