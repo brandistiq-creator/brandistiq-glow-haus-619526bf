@@ -25,6 +25,7 @@ const services = [
       "Sigurnost podataka",
       "Skalabilna arhitektura",
     ],
+    link: "/web-aplikacije-app-vodic",
   },
   {
     icon: Palette,

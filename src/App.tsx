@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import WebAplikacijeVodic from "./pages/WebAplikacijeVodic.tsx";
+import WebAplikacijeAppVodic from "./pages/WebAplikacijeAppVodic.tsx";
 import ScrollToTop from "./components/ScrollToTop.tsx";
 
 const queryClient = new QueryClient();
@@ -20,6 +21,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/web-aplikacije-vodic" element={<WebAplikacijeVodic />} />
+          <Route path="/web-aplikacije-app-vodic" element={<WebAplikacijeAppVodic />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
