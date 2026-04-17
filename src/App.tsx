@@ -17,21 +17,22 @@ const App = () => (
   <HelmetProvider>
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/web-aplikacije-vodic" element={<WebAplikacijeVodic />} />
-          <Route path="/web-aplikacije-app-vodic" element={<WebAplikacijeAppVodic />} />
-          <Route path="/brending-vodic" element={<BrendingVodic />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <ScrollToTop />
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/web-aplikacije-vodic" element={<WebAplikacijeVodic />} />
+            <Route path="/web-aplikacije-app-vodic" element={<WebAplikacijeAppVodic />} />
+            <Route path="/brending-vodic" element={<BrendingVodic />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  </HelmetProvider>
 );
 
 export default App;
