@@ -82,6 +82,28 @@ const industries = [
 const WebAplikacijeAppVodic = () => {
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Izrada web aplikacija po mjeri | Custom softver — BrandistiQ</title>
+        <meta
+          name="description"
+          content="Custom web aplikacije za automatizaciju poslovanja: skalabilna, sigurna i dostupna bilo gdje. Digitalna transformacija za moderno poslovanje."
+        />
+        <link rel="canonical" href="https://brandistiq-glow-haus.lovable.app/web-aplikacije-app-vodic" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Izrada web aplikacija po mjeri | Custom softver — BrandistiQ" />
+        <meta
+          property="og:description"
+          content="Kako prilagođeni softver transformira moderno poslovanje: automatizacija, skalabilnost, sigurnost."
+        />
+        <meta property="og:url" content="https://brandistiq-glow-haus.lovable.app/web-aplikacije-app-vodic" />
+        <meta property="og:image" content="https://brandistiq-glow-haus.lovable.app/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Izrada web aplikacija po mjeri — BrandistiQ" />
+        <meta
+          name="twitter:description"
+          content="Custom web aplikacije za automatizaciju, skalabilnost i sigurnost vašeg poslovanja."
+        />
+      </Helmet>
       <Navbar />
 
       {/* Hero */}
