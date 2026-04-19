@@ -49,6 +49,7 @@ const services = [
       "Obrada dokumenata s AI-jem",
       "Chatbot i korisnička podrška",
     ],
+    link: "/ai-rjesenja-vodic",
   },
 ];
 

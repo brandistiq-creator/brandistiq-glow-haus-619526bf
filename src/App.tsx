@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound.tsx";
 import WebAplikacijeVodic from "./pages/WebAplikacijeVodic.tsx";
 import WebAplikacijeAppVodic from "./pages/WebAplikacijeAppVodic.tsx";
 import BrendingVodic from "./pages/BrendingVodic.tsx";
+import AIRjesenjaVodic from "./pages/AIRjesenjaVodic.tsx";
 import ScrollToTop from "./components/ScrollToTop.tsx";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
             <Route path="/web-aplikacije-vodic" element={<WebAplikacijeVodic />} />
             <Route path="/web-aplikacije-app-vodic" element={<WebAplikacijeAppVodic />} />
             <Route path="/brending-vodic" element={<BrendingVodic />} />
+            <Route path="/ai-rjesenja-vodic" element={<AIRjesenjaVodic />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
