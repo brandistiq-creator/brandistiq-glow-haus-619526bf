@@ -23,3 +23,19 @@ function renderConsent(){const existing=document.querySelector(".cookie-banner")
 function showCookieSettings(){const m=document.createElement("div");m.className="cookie-modal";m.innerHTML='<div class="cookie-panel"><h3>Postavke kolačića</h3><p>Odaberite koje kategorije želite dopustiti. Nužne tehnologije ostaju aktivne jer su potrebne za osnovno funkcioniranje stranice.</p><div class="cookie-option"><input type="checkbox" checked disabled><div><strong>Nužni</strong><br><small>Potrebni za osnovne funkcije stranice i upravljanje privolom.</small></div></div><div class="cookie-option"><input id="cookieAnalytics" type="checkbox"><div><strong>Analitički</strong><br><small>Google Analytics za mjerenje posjećenosti i korištenja stranice.</small></div></div><div class="cookie-actions"><button class="cookie-accept" id="saveCookieSettings">Spremi odabir</button><button class="cookie-reject" id="closeCookieSettings">Odustani</button></div></div>';document.body.appendChild(m);m.querySelector("#saveCookieSettings").onclick=()=>{saveConsent(m.querySelector("#cookieAnalytics").checked?"accepted":"rejected");m.remove()};m.querySelector("#closeCookieSettings").onclick=()=>m.remove();}
 function addCookieManager(){if(document.querySelector(".cookie-manage"))return;const a=document.createElement("button");a.className="cookie-manage";a.textContent="Postavke kolačića";a.onclick=showCookieSettings;document.body.appendChild(a);}
 (function(){const c=localStorage.getItem("brandistiq_cookie_consent");if(c==="accepted")loadGA();renderConsent();addCookieManager();})();
+
+
+/* BrandistiQ conversion events: analytics runs only after consent is accepted and a GA4 ID is configured. */
+(function(){
+  function track(name,params={}){
+    if(localStorage.getItem("brandistiq_cookie_consent")!=="accepted" || typeof window.gtag!=="function") return;
+    window.gtag("event",name,params);
+  }
+  document.addEventListener("click",function(e){
+    const a=e.target.closest("a"); if(!a) return;
+    if(a.href && a.href.startsWith("https://wa.me/")) track("whatsapp_click",{link_url:a.href});
+    else if(a.href && a.href.startsWith("tel:")) track("phone_click",{link_url:a.href});
+    else if(a.href && a.pathname==="/kontakt/") track("contact_cta_click",{link_url:a.href});
+  });
+  document.querySelectorAll('form[name="brandistiq-kontakt"]').forEach(form=>form.addEventListener("submit",()=>track("contact_form_submit",{form_name:form.name})));
+})();
